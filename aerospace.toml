@@ -59,10 +59,10 @@ preset = 'qwerty'
 [gaps]
 inner.horizontal = 20
 inner.vertical =   20
-outer.left =       8
-outer.bottom =     8
-outer.top =        24
-outer.right =      8
+outer.left =       4
+outer.bottom =     4
+outer.top =        4
+outer.right =      4
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -124,6 +124,7 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
+alt-shift-y = '''exec-and-forget /usr/local/bin/aerospace focus --window-id $(/usr/local/bin/aerospace list-windows --all --json | /usr/local/bin/jq 'map(select(."app-name" == "Spotify")."window-id")[0]')'''
 alt-shift-s = '''exec-and-forget /usr/local/bin/aerospace focus --window-id $(/usr/local/bin/aerospace list-windows --all --json | /usr/local/bin/jq 'map(select(."app-name" == "Slack")."window-id")[0]')'''
 alt-shift-t = '''exec-and-forget /usr/local/bin/aerospace focus --window-id $(/usr/local/bin/aerospace list-windows --all --json | /usr/local/bin/jq 'map(select(."app-name" == "Ghostty")."window-id")[0]')'''
 alt-shift-f = '''exec-and-forget /usr/local/bin/aerospace focus --window-id $(/usr/local/bin/aerospace list-windows --all --json | /usr/local/bin/jq 'map(select(."app-name" == "Firefox")."window-id")[0]')'''
@@ -192,3 +193,10 @@ shift-down = ['volume set 0', 'mode main']
     if.app-id = 'com.spotify.client'
     check-further-callbacks = true
     run = ['move-node-to-workspace 4']
+
+[workspace-to-monitor-force-assignment]
+1 = 1
+2 = 'U2417H'
+3 = 'Built-in'
+4 = 'Built-in'
+5 = 'Built-in'
