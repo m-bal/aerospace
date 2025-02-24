@@ -194,9 +194,14 @@ shift-down = ['volume set 0', 'mode main']
     check-further-callbacks = true
     run = ['move-node-to-workspace 4']
 
+[[on-window-detected]]
+    if.app-id = 'com.apple.Safari'
+    check-further-callbacks = true
+    run = ['move-node-to-workspace 5']
+
 [workspace-to-monitor-force-assignment]
 1 = 1
 2 = 'U2417H'
 3 = 'Built-in'
 4 = 'Built-in'
-5 = 'Built-in'
+5 = 'U2417H'
